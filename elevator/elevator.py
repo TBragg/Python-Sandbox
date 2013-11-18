@@ -21,6 +21,7 @@ def DisplayBuilding(floor):
 		else:
 			print '||-----------||', x 
 
+# Still need to work on confirming integer value
 def IntroScreen():
 	os.system('clear')
 	DisplayBuilding(0)
