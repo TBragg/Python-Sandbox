@@ -25,11 +25,14 @@ def IntroScreen():
 	os.system('clear')
 	DisplayBuilding(0)
 	input = raw_input('Please enter a floor number: ')
+	while(isinstance(input, int) == False):
+		print("That's not an int!")
+		input = raw_input('Please enter a valid floor number: ')
 
 os.system('clear')
 print 'Welcome to Taylor\'s Elevator Simulation Script(TM)'
 time.sleep(2)
 
-IntroScreen()
+floor_selection = IntroScreen()
 
 print 'Completed!'
