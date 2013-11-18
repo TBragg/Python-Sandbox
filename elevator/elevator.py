@@ -1,3 +1,5 @@
-print 'Hello world'
-print 'adding another line here my dude'
-print 'This is fucking TAYLOR'
+import os
+
+os.system('clear')
+
+print 'Starting the Elevator Simulation Script(TM)'
