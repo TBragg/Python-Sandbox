@@ -1,6 +1,8 @@
 import os
 import time
 
+BUILDING_HEIGHT = 20
+
 # Function definitions
 def ElevatorSimulator(e,f):
 	os.system('clear')
@@ -12,12 +14,22 @@ def ElevatorSimulator(e,f):
 		else:
 			print '*-----------*'
 
+def DisplayBuilding(floor):
+	for x in range(BUILDING_HEIGHT,0,-1):
+		if x==(floor+1):
+			print '||----[0]----||', x
+		else:
+			print '||-----------||', x 
+
+def IntroScreen():
+	os.system('clear')
+	DisplayBuilding(0)
+	input = raw_input('Please enter a floor number: ')
+
 os.system('clear')
-print 'Starting the Elevator Simulation Script(TM)'
+print 'Welcome to Taylor\'s Elevator Simulation Script(TM)'
 time.sleep(2)
 
-floors = 20
-for elevator in range(0,floors):
-	ElevatorSimulator(elevator,floors)
-	time.sleep(0.5)
+IntroScreen()
+
 print 'Completed!'
