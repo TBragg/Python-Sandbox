@@ -21,14 +21,20 @@ def DisplayBuilding(floor):
 		else:
 			print '||-----------||', x 
 
+def RepresentsInt(s):
+    try: 
+        int(s)
+        return True
+    except ValueError:
+        return False
+
 # Still need to work on confirming integer value
 def IntroScreen():
 	os.system('clear')
 	DisplayBuilding(0)
-	input = raw_input('Please enter a floor number: ')
-	while(isinstance(input, int) == False):
-		print("That's not an int!")
-		input = raw_input('Please enter a valid floor number: ')
+	userInput = raw_input('Please enter a floor: ')
+	while(RepresentsInt(userInput) != True):
+		userInput = raw_input('Please enter a valid floor: ')
 
 os.system('clear')
 print 'Welcome to Taylor\'s Elevator Simulation Script(TM)'
