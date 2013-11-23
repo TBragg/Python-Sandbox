@@ -1,15 +1,11 @@
-import os
-import time
+__file__	= "ichk.py"
+__author__	= "Taylor Bragg"
 
-def integer_check():
-	input = raw_input ('Input: ')
+def isInt(x):
 	try:
-		input = int(input)
+		x = int(x)
 		return True
 	except:
-		return False
+		return False 
 
-while not integer_check():
-	print 'Not a valid input.'
-	
-print 'Yay! That was an integer!'
+# End of integercheck.py
