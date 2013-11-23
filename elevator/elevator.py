@@ -1,5 +1,8 @@
+#!/usr/bin/python
+
 import os
 import time
+import ichk
 
 BUILDING_HEIGHT = 20
 
@@ -21,20 +24,14 @@ def DisplayBuilding(floor):
 		else:
 			print '||-----------||', x 
 
-def RepresentsInt(s):
-    try: 
-        int(s)
-        return True
-    except ValueError:
-        return False
-
 # Still need to work on confirming integer value
 def IntroScreen():
 	os.system('clear')
 	DisplayBuilding(0)
-	userInput = raw_input('Please enter a floor: ')
-	while(RepresentsInt(userInput) != True):
-		userInput = raw_input('Please enter a valid floor: ')
+	while True:
+		input = raw_input('Please enter a valid floor number: ')
+		if ichk.isInt(input):
+			break
 
 os.system('clear')
 print 'Welcome to Taylor\'s Elevator Simulation Script(TM)'
