@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 __file__	= "module_test.py"
 __author__	= "Taylor Bragg"
