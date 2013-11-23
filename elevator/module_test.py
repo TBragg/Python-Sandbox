@@ -1,4 +1,4 @@
-#!~/projects/python/elevator
+#!/usr/bin/env python
 # Filename: module_test.py
 
 import sys
