@@ -2,4 +2,6 @@
 
 import atm
 
+atm.login()
+
 atm.showBalance()
