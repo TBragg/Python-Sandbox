@@ -2,6 +2,7 @@
 
 import atm
 
-atm.login()
+success = atm.login()
 
-atm.showBalance()
+if success:
+	atm.showBalance()
