@@ -13,9 +13,10 @@ def login():
 		count+=1
 		input = raw_input('Please enter your PIN: ')
 		if ichk.isInt(input) and int(input)==PIN_NUMBER:
-			break
-		else if count == LOGIN_TRIES:
-			print 'You've exceeded the number of login attempts. Goodbye.'
+			return True
+		elif count == LOGIN_TRIES:
+			print "You've exceeded the number of login attempts. Goodbye."
+			return False
 		else:
 			print 'Incorrect PIN. Please try again.'
 
